@@ -1,9 +1,10 @@
 // Setting up required dependencies
 const bodyParser = require('body-parser');
 const express = require('express');
+const path = require('path');
 
 const app = express();
-const PORT = 1170; 
+const PORT = 1170;
 
 app.get('/', function (req, res) {
     res.send('Hello World!');
@@ -11,7 +12,7 @@ app.get('/', function (req, res) {
 
 
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
 
