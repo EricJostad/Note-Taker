@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
 
-// This requires the server to route the user to the html index file 
+require('./routing/api-routes')(app);
 require('./routing/html-routes')(app);
 
 // Listener
