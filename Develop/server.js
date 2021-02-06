@@ -5,7 +5,7 @@ const path = require('path');
 
 // This creates the express app
 const app = express();
-const PORT = 1170;
+const PORT = process.env.PORT || 1170;
 
 // Setting up middleware to parse json file
 app.use(bodyParser.urlencoded({ extended: false }));
